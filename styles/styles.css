@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --primary-color: #1984ae;
+  --primary-color: #42a8c3;
   --secondary-color: #fa8443;
-  --background-color: #e7e9ee;
-  --primary-faded: #6dabd779;
+  --background-color: #fdfdfd;
+  --primary-faded: #42a7c346;
   --text-gray: #565656;
   --bg-gray-faded: #f6f6f6;
 }
@@ -21,20 +21,35 @@
 }
 
 .btn {
-  padding: 10px 30px;
+  padding: 15px 30px;
   font: bold;
   border: none;
-  background-color: var(--secondary-color);
   color: white;
   font-size: 14px;
   font-weight: 500;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-white {
+  background-color: var(--background-color);
+  color: var(--primary-color) !important;
 }
 
 /* Navbar */
 
 .logo {
   color: var(--primary-color);
+}
+.logo-white {
+  color: var(--background-color);
+  font-size: 22px;
 }
 
 .nav-wrapper {
@@ -130,14 +145,20 @@
 }
 
 .image-wrapper {
-    width: 100%;
-    max-height: 60%;
+  width: 100%;
+  height: 60%;
 }
 
 .popular-destination-card img {
   border-radius: 10px;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.popular-destination-card p {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .destination {
@@ -146,8 +167,176 @@
 }
 
 .destination p {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 400;
 }
 .destination img {
-    width: 7%;
+  width: 7%;
+}
+
+.duration {
+  font-size: 12px !important;
+  font-weight: 300 !important;
+  color: var(--text-gray);
+}
+
+.price {
+  font-size: 14px !important;
+  color: var(--primary-color);
+}
+
+.price span {
+  font-size: 12px !important;
+  font-weight: 300 !important;
+}
+
+/* why choose us */
+.why-choose-us-section {
+  background-image: linear-gradient(
+    130deg,
+    var(--primary-faded) 5%,
+    var(--background-color) 45%
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.why-us-image,
+.why-us-content {
+  width: 45%;
+}
+.why-us-content h1 {
+  font-weight: 600;
+}
+.why-us-content p {
+  font-weight: 300;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.service:hover {
+  background-color: white;
+  box-shadow: 0 14px 24px #6061701f;
+}
+
+.service img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.service-icon {
+  padding: 10px 15px;
+  background-color: white;
+  width: 10%;
+  border-radius: 10px;
+}
+
+.service-name > .name {
+  font-size: 16px;
+  font-weight: 600;
+}
+.service-name > .description {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-gray);
+}
+
+/* Footer */
+
+footer {
+  height: 60vh;
+  background-color: var(--primary-color);
+  border-radius: 40px 40px 0 0;
+}
+
+.footer-ctas {
+  background-color: rgba(255, 255, 255, 0.188);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.787);
+  padding: 40px;
+  /* margin-top: 50px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .small {
+  font-size: 18px;
+  color: white;
+}
+
+.content .large {
+  font-size: 36px;
+  color: white;
+  font-weight: 700;
+}
+
+.ctas {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app-links {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px white;
+  padding-bottom: 20px;
+}
+
+.app-links .left {
+  width: 30%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: white;
+}
+
+.footer-links a {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.right p {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.credits-and-socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.credits-and-socials p {
+  color: white;
+  font-size: 14px;
 }
